@@ -1,4 +1,4 @@
-package org.springframework.quoters.modelo;
+package org.springframework.polizas.modelo;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -8,39 +8,45 @@ import java.util.Objects;
 public class Poliza {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idPoliza;
-    @Column(nullable = false)
+    @GeneratedValue
+    private Integer idPoliza;
+
     private Date fechaPoliza;
-    @Column(nullable = false)
+
     private String coberturasPoliza;
-    @Column(nullable = false)
+
     private Integer valorMaximoPoliza;
-    @Column(nullable = false)
+
     private String nombrePlanPoliza;
 
-    @Column(nullable = false)
     private String placaAuto;
-    @Column(nullable = false)
+
     private String modeloAuto;
-    @Column(nullable = false)
+
     private boolean inspeccionAuto;
 
-    private Long idCliente;
-    @Column(nullable = false)
+    private Integer idCliente;
+
     private String nombreCliente;
-    @Column(nullable = false)
+
     private Date fechaNacimiento;
-    @Column(nullable = false)
+
     private  String ciudadCliente;
-    @Column(nullable = false)
+
     private String direccionCliente;
 
     public Poliza() {
 
     }
 
-    public Poliza(Long idPoliza, Date fechaPoliza, String coberturasPoliza, Integer valorMaximoPoliza, String nombrePlanPoliza, String placaAuto, String modeloAuto, boolean inspeccionAuto, Long idCliente, String nombreCliente, Date fechaNacimiento, String ciudadCliente, String direccionCliente) {
+    /*public Poliza(Integer idPoliza, String nombrePlanPoliza, String placaAuto, String nombreCliente) {
+        this.idPoliza = idPoliza;
+        this.nombrePlanPoliza = nombrePlanPoliza;
+        this.placaAuto = placaAuto;
+        this.nombreCliente = nombreCliente;
+    }*/
+
+    public Poliza(Integer idPoliza, Date fechaPoliza, String coberturasPoliza, Integer valorMaximoPoliza, String nombrePlanPoliza, String placaAuto, String modeloAuto, boolean inspeccionAuto, Integer idCliente, String nombreCliente, Date fechaNacimiento, String ciudadCliente, String direccionCliente) {
         this.idPoliza = idPoliza;
         this.fechaPoliza = fechaPoliza;
         this.coberturasPoliza = coberturasPoliza;
@@ -56,11 +62,11 @@ public class Poliza {
         this.direccionCliente = direccionCliente;
     }
 
-    public Long getIdPoliza() {
+    public Integer getIdPoliza() {
         return idPoliza;
     }
 
-    public void setIdPoliza(Long idPoliza) {
+    public void setIdPoliza(Integer idPoliza) {
         this.idPoliza = idPoliza;
     }
 
@@ -120,11 +126,11 @@ public class Poliza {
         this.inspeccionAuto = inspeccionAuto;
     }
 
-    public Long getIdCliente() {
+    public Integer getIdCliente() {
         return idCliente;
     }
 
-    public void setIdCliente(Long idCliente) {
+    public void setIdCliente(Integer idCliente) {
         this.idCliente = idCliente;
     }
 

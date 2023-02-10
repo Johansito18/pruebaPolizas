@@ -1,38 +1,34 @@
-package org.springframework.quoters;
+package org.springframework.polizas;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.quoters.modelo.Poliza;
+
+import org.springframework.polizas.modelo.Poliza;
+import org.springframework.polizas.repositorio.PolizaRepository;
+
+import java.util.Date;
 
 @Configuration //Es una clase de configuracion par el framework
 public class DataBaseLoader {
-
+    //Date fecha = new Date(2020,10,10);
     @Bean// Anotación que marca los metodos para que esten disponibles para spring cuando se inicialice
-    CommandLineRunner init(QuoteRepository repository){
+    CommandLineRunner init(PolizaRepository repository){
 
         return args -> {
-            repository.save(new Poliza("Working with Spring Boot is like pair-programming with the Spring developers."));
-            repository.save(new Poliza("With Boot you deploy everywhere you can find a JVM basically."));
-            repository.save(new Poliza("Spring has come quite a ways in addressing developer enjoyment and "
-                    + "ease of use since the last time I built an application using it."));
-            repository.save(new Poliza(
-                    "Previous to Spring Boot, I remember XML hell, confusing set up, and " + "many hours of frustration."));
-            repository.save(new Poliza("Spring Boot solves this problem. It gets rid of XML and wires up "
-                    + "common components for me, so I don't have to spend hours scratching my "
-                    + "head just to figure out how it's all pieced together."));
-            repository.save(new Poliza("It embraces " + "convention over configuration, providing an experience on par with "
-                    + "frameworks that excel at early stage development, such as Ruby on " + "Rails."));
-            repository.save(new Poliza("The real benefit of Boot, however, is that it's just Spring. That "
-                    + "means any direction the code takes, regardless of complexity, I know " + "it's a safe bet."));
-            repository.save(new Poliza("I don't worry about my code scaling. Boot allows the "
-                    + "developer to peel back the layers and customize when it's appropriate "
-                    + "while keeping the conventions that just work."));
-            repository.save(new Poliza("So easy it is to switch container in #springboot."));
-            repository.save(new Poliza("Really loving Spring Boot, makes stand alone Spring apps easy."));
-            repository.save(new Poliza("I have two hours today to build an app from scratch. @springboot to the rescue!"));
-            repository.save(new Poliza("@springboot with @springframework is pure productivity! Who said in #java one has "
-                    + "to write double the code than in other langs? #newFavLib"));
+            repository.save(new Poliza(1,new Date(2020,1,10),"todo",1000,"poliza1","AAA123","ferrari",true,12345,"johan",new Date(2000,10,10),"Medellin","Itagui"));
+            repository.save(new Poliza(2, new Date(2020,2,10),"todo",2000,"poliza2","BBB123","ferrari",true,12345,"andres",new Date(2000,10,10),"Medellin","Itagui"));
+            repository.save(new Poliza(4, new Date(2020,3,10),"todo",3000,"poliza3","CCC123","ferrari",false,12345,"felipe",new Date(2000,10,10),"Medellin","Itagui"));
+            repository.save(new Poliza(1, new Date(2020,4,10),"todo",4000,"poliza4","DDD123","ferrari",true,12345,"david",new Date(2000,10,10),"Medellin","Itagui"));
+            repository.save(new Poliza(5, new Date(2020,5,10),"todo",5000,"poliza5","EEE123","ferrari",false,12345,"jorge",new Date(2000,10,10),"Medellin","Itagui"));
+            repository.save(new Poliza(6, new Date(2020,6,10),"todo",5000,"poliza6","FFF123","ferrari",true,12345,"brahian",new Date(2000,10,10),"Medellin","Itagui"));
+            repository.save(new Poliza(7, new Date(2020,7,10),"todo",4000,"poliza7","HHH123","ferrari",false,12345,"camilo",new Date(2000,10,10),"Medellin","Itagui"));
+            repository.save(new Poliza(8, new Date(2020,8,10),"todo",6000,"poliza8","III123","ferrari",true,12345,"juan",new Date(2000,10,10),"Medellin","Itagui"));
+            repository.save(new Poliza(9, new Date(2020,9,10),"todo",4000,"poliza9","JJJ123","ferrari",true,12345,"andrea",new Date(2000,10,10),"Medellin","Itagui"));
+            repository.save(new Poliza(10, new Date(2020,10,10),"todo",1000,"poliza10","CDC123","ferrari",true,12345,"luz",new Date(2000,10,10),"Medellin","Itagui"));
+
+
+
         };
     }
 }

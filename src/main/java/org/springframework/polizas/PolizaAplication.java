@@ -4,9 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class QuotersIncorporatedApplication {
+public class PolizaAplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(QuotersIncorporatedApplication.class);
+        SpringApplication.run(PolizaAplication.class);
+
     }
 }
